@@ -7,8 +7,8 @@ public class RagdollController : MonoBehaviour
     Rigidbody[] ragdollRigidbodies;
     Joint[] ragdollJoints;
     Collider[] ragdollColliders;
-    // Start is called before the first frame update
-    void Start()
+
+    public void Init()
     {
         ragdollRigidbodies = GetComponentsInChildren<Rigidbody>();
         ragdollJoints = GetComponentsInChildren<Joint>();

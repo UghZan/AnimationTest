@@ -38,7 +38,7 @@ public class PlayerRotation : MonoBehaviour
 
     public void RotatePlayerTowardsTarget()
     {
-        Quaternion targetRotation = Quaternion.LookRotation(PlayerMovement.MovementVector.normalized, Vector3.up); //get a rotation towards move direction
+        Quaternion targetRotation = Quaternion.LookRotation((PlayerMovement.MovementTarget - transform.position).normalized, Vector3.up); //get a rotation towards move direction
         PlayerModel.localRotation = targetRotation;
     }
 

@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
+        EnemyRagdollController.Init();
         EnemyRagdollController.Unragdoll();
     }
 
@@ -25,8 +26,8 @@ public class Enemy : MonoBehaviour
 
     public void RespawnSequence()
     {
+        EnemyRagdollController.Unragdoll();
         EnemyAnimator.enabled = true;
         EnemyCollider.enabled = true;
-        EnemyRagdollController.Unragdoll();
     }
 }
